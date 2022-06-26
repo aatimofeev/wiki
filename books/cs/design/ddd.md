@@ -20,4 +20,6 @@ operation
   * The operation is stateless. Statelessness here means that any client can use any instance of a particular SERVICE without regard to the instance's individual history.
 ##  modules
 * there should be low coupling between MODULES and high cohesion within them
+## aggregates 
+* Cluster the ENTITIES and VALUE OBJECTS into AGGREGATES and define boundaries around each. Choose one ENTITY to be the root of each AGGREGATE, and control all access to the objects inside the boundary through the root. Allow external objects to hold references to the root only. Transient references to internal members can be passed out for use within a single operation only. Because the root controls access, it cannot be blindsided by changes to the internals. This arrangement makes it practical to enforce all invariants for objects in the AGGREGATE and for the AGGREGATE as a whole in any state change.
 * 
