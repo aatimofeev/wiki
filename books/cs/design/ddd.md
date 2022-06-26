@@ -7,17 +7,17 @@
 * > When an object is distinguished by its identity, rather than its attributes, make this primary to its definition in the model. Keep the class definition simple and focused on life cycle continuity and identity. Define a means of distinguishing each object regardless of its form or history. Be alert to requirements that call for matching objects by attributes. Define an operation that is guaranteed to produce a unique result for each object, possibly by attaching a symbol that is guaranteed unique. This means of identification may come from the outside, or it may be an arbitrary identifier created by and for the system, but it must correspond to the identity distinctions in the model. The model must define what it means to be the same thing.
 * > the most basic responsibility of ENTITIES is to establish continuity so that behavior can be clear and predictable
 operation  
-# value objects
+## value objects
 * > An object that represents a descriptive aspect of the domain with no conceptual identity is called a VALUE OBJECT.
 * > VALUE OBJECTS can reference ENTITIES
 * > When you care only about the attributes of an element of the model, classify it as a VALUE OBJECT. Make it express the meaning of the attributes it conveys and give it related functionality. Treat the VALUE OBJECT as immutable. Don't give it any identity and avoid the design complexities necessary to maintain ENTITIES.
 * The attributes that make up a VALUE OBJECT should form a conceptual whole
-# services
+## services
 * > A SERVICE is an operation offered as an interface that stands alone in the model, without encapsulating state, as ENTITIES and VALUE OBJECTS do.
 * A good SERVICE has three characteristics.
   * The operation relates to a domain concept that is not a natural part of an ENTITY or VALUE OBJECT.
   * The interface is defined in terms of other elements of the domain model.
   * The operation is stateless. Statelessness here means that any client can use any instance of a particular SERVICE without regard to the instance's individual history.
-# modules
+##  modules
 * there should be low coupling between MODULES and high cohesion within them
 * 
